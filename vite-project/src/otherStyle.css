@@ -1,0 +1,33 @@
+.container{
+    /*border: 1px solid black;*/
+    width: 85px;
+    height: 55px;
+    position: relative;
+    user-select: none;
+}
+
+.editText{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.repite{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.name, .name:disabled{
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: system-ui;
+    padding: 11px;
+    text-align: center;
+    width: 35px;
+    height: 30px;
+    border-radius: 8px;
+    float: left;
+    user-select: none;
+    cursor: pointer;
+    resize: none;
+    overflow: hidden;
+}

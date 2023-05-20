@@ -1,26 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-
-
-// function GetAudio(id: string) {
-//   const soundsFiles = [
-//     {name: "Heater-1",  path: "/sounds/Heater-1.mp3"},
-//     {name: "Heater-2", path: "/sounds/Heater-2.mp3"},
-//     {name: "Heater-3", path: "/sounds/Heater-3.mp3"},
-//     {name: "Heater-4_1", path: "/sounds/Heater-4_1.mp3"},
-//     {name: "Heater-6", path: "/sounds/Heater-6.mp3"},
-//     {name: "Cev_H2", path: "/sounds/Cev_H2.mp3"},
-//     {name: "Dsc_Oh", path: "/sounds/Dsc_Oh.mp3"},
-//     {name: "Kick_n_Hat", path: "/sounds/Kick_n_Hat.mp3"},
-//     {name: "RP4_KICK_1", path: "/sounds/RP4_KICK_1.mp3"}
-//   ];
-
-//   for (let i = 0; i < soundsFiles.length; i++) {
-//     if (soundsFiles[i].name === id) {
-//       return soundsFiles[i].path;
-//     }
-//   }
-// }
-
 const Buttons: React.FC<ButtonsProps> = (props) => {
 
   document.onkeydown = (e) => {
@@ -33,15 +10,10 @@ const Buttons: React.FC<ButtonsProps> = (props) => {
 
   const HandleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 
-    // const audio = new Audio(GetAudio(e.currentTarget.id));
-    // audio.play();
-    // const audioElement = e.currentTarget.firstElementChild;
-    // (audioElement as HTMLAudioElement).play();
-    const doc = document.querySelector(`#${e.currentTarget.textContent}`) as HTMLAudioElement;
-    doc.play();
+    const audio = document.querySelector(`#${e.currentTarget.textContent}`) as HTMLAudioElement;
+    audio.play();
     props.SetClipName(e.currentTarget.id);
   }
-
 
   return(
     <>

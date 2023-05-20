@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import Buttons from './buttons';
+import './otherStyle.css';
 import './App.css'
 
 function App() {
